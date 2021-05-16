@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300&display=swap");
+
+:root {
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(80, 94, 133);
+  color: rgb(230, 230, 230);
+}
+
+#welcome-section {
+  height: 100vh;
+  background: linear-gradient(135deg, #111, #333);
+  margin-bottom: 3rem;
+}
+
+#navbar {
+  border-bottom-color: #f05;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  position: fixed;
+  width: 100%;
+  background: linear-gradient(135deg, #151515, #222);
+  z-index: 1;
+}
+
+#navbar ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-item {
+  color: #fff;
+  margin: 1em 1.5rem 1em 1em;
+  font-size: 1.3rem;
+  transition: color 200ms;
+}
+
+.nav-item:hover {
+  color: #f05;
+  transition: color 500ms;
+}
+
+.nav-item::before {
+  content: "<";
+  opacity: 0;
+  transition: opacity ease 400ms;
+  color: #f05;
+  margin-right: 10px;
+  font-weight: 400;
+}
+
+.nav-item::after {
+  content: "/>";
+  opacity: 0;
+  transition: opacity ease 400ms;
+  color: #f05;
+  margin-left: 10px;
+  font-weight: 400;
+}
+
+.nav-item:hover::before {
+  opacity: 100;
+}
+
+.nav-item:hover::after {
+  opacity: 100;
+}
+
+.title {
+  color: #fff;
+  letter-spacing: 0.2rem;
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.title::before {
+  content: "<";
+  opacity: 0;
+  transition: opacity ease 400ms;
+  color: #f05;
+  margin-right: 10px;
+  font-weight: 400;
+}
+
+.title::after {
+  content: "/>";
+  opacity: 0;
+  transition: opacity ease 400ms;
+  color: #f05;
+  margin-left: 10px;
+  font-weight: 400;
+}
+
+.title:hover::before {
+  opacity: 100;
+}
+
+.title:hover::after {
+  opacity: 100;
+}
+
+.subtitle {
+  color: #f05;
+  font-size: 1.4rem;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.section-header {
+  font-size: 2.1rem;
+  border-bottom: 2px solid rgb(230, 230, 230);
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+
+#heading {
+	height: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 58px;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: unset;
+}
+
+#projects-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.project-title {
+	text-align: center;
+	font-size: 1.5rem;
+	padding: 10px;
+}
+
+#projects {
+	display: grid;
+	grid-template-columns: 2fr 2fr;
+	grid-template-rows: 2fr 2fr;
+	gap: 70px;
+	margin-top: 50px;
+}
+
+.project-tile {
+	background-color: rgb(49, 51, 66);
+	border: 3px solid rgb(49, 51, 66);
+	transition: transform 200ms;
+}
+
+.project-tile:hover {
+	transform: scale(1.02);
+}
+
+
+#profile-link {
+	background-color: rgb(49, 51, 66);
+	padding: 15px 20px 15px 20px;
+	margin-top: 50px;
+	font-size: 1.2rem;
+	transition: background-color 200ms;
+}
+
+#profile-link:hover {
+	background-color: rgb(34, 35, 46);
+}
+
+#contact {
+	background-color: rgb(49, 51, 66);
+	margin-top: 70px;
+	height: 85vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.contact-header {
+	text-align: center;
+	font-size: 3.2rem;
+}
+
+.profile-link {
+	font-size: 1.4rem;
+	transition: transform 200ms;
+	padding-bottom: 10px;
+}
+
+.profile-link:hover {
+	transform: translateY(10px);
+}
+
+.links {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	max-width: 700px;
+	width: 100%;
+	margin-top: 50px;
+	flex-wrap: wrap;
+}
+
+footer {
+	border-top-color: #f05;
+	border-top-width: 2px;
+	border-top-style: solid;
+	background: linear-gradient(135deg, #151515, #222);
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 50px 30px 50px;
+	flex-wrap: wrap;
+}
+
+footer > * {
+	padding: 10px;
+}
+
+@media (max-width: 500px) {
+	.subtitle {
+		font-size: 1.1rem;
+	}
+	.title {
+		font-size: 2.3rem;
+	}
+	.nav-item {
+		font-size: 1.1rem;
+	}
+	
+	.section-header {
+		font-size: 1.7rem;
+	}
+	
+	#navbar ul {
+		justify-content: center;
+	}
+
+	.project-tile img {
+		height: 300px;
+		width: 320px;
+	}
+}
+@media (max-width: 840px) {
+	#projects {
+		grid-template-columns: 1fr;
+		grid-template-rows: 4fr 4fr 4fr 4fr;
+	}
+}
